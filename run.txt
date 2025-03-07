@@ -1,0 +1,22 @@
+sample
+python iadb_bn.py --model=model_blue --cov=blue --dataset=cat_res64 --res=64 --batch_size=16 --train_or_test=test --nb_steps=250 --test_samples=5000 --noise_type=gaussianBN --scheduler_gamma=sigmoid --scheduler_param=1000 --out_channel=6
+
+python iadb_bn.py --model=model_purple --cov=purple --dataset=cat_res64 --res=64 --batch_size=16 --train_or_test=test --nb_steps=250 --test_samples=5000 --noise_type=gaussianBN --scheduler_gamma=sigmoid --scheduler_param=1000 --out_channel=6
+
+python iadb_bn.py --model=model_pink --cov=pink --dataset=cat_res64 --res=64 --batch_size=16 --train_or_test=test --nb_steps=250 --test_samples=5000 --noise_type=gaussianBN --scheduler_gamma=sigmoid --scheduler_param=1000 --out_channel=6
+
+python iadb_bn.py --model=model_purplestrong --cov=purplestrong --dataset=cat_res64 --res=64 --batch_size=16 --train_or_test=test --nb_steps=250 --test_samples=5000 --noise_type=gaussianBN --scheduler_gamma=sigmoid --scheduler_param=1000 --out_channel=6
+
+python iadb_bn.py --model=model_violet --cov=violet --dataset=cat_res64 --res=64 --batch_size=16 --train_or_test=test --nb_steps=250 --test_samples=5000 --noise_type=gaussianBN --scheduler_gamma=sigmoid --scheduler_param=1000 --out_channel=6
+
+python iadb_bn.py --model=model_bluev2 --cov=bluev2 --dataset=cat_res64 --res=64 --batch_size=16 --train_or_test=test --nb_steps=250 --test_samples=5000 --noise_type=gaussianBN --scheduler_gamma=sigmoid --scheduler_param=1000 --out_channel=6
+
+python iadb_bn.py --model=model_untrained --cov=untrained --dataset=cat_res64 --res=64 --batch_size=16 --train_or_test=test --nb_steps=250 --test_samples=5138 --noise_type=gaussianBN --scheduler_gamma=sigmoid --scheduler_param=1000 --out_channel=6
+train
+python iadb_bn.py --dataset=cat_res64 --res=64 --batch_size=32 --epochs=20 --train_or_test=train --lr=0.0001 --grad_clip=1.0  --noise_type=gaussianBN --scheduler_gamma=sigmoid --scheduler_param=1000 --out_channel=6 --cov=theirs
+python iadb_bn.py --dataset=cat_res64 --res=64 --batch_size=32 --epochs=20 --train_or_test=train --lr=0.0001 --grad_clip=1.0  --noise_type=gaussianBN --scheduler_gamma=sigmoid --scheduler_param=1000 --out_channel=6 --cov=blue --model=model_blue
+python iadb_bn.py --dataset=cat_res64 --res=64 --batch_size=32 --epochs=20 --train_or_test=train --lr=0.0001 --grad_clip=1.0  --noise_type=gaussianBN --scheduler_gamma=sigmoid --scheduler_param=1000 --out_channel=6 --cov=purple --model=model_purple
+python iadb_bn.py --dataset=cat_res64 --res=64 --batch_size=32 --epochs=20 --train_or_test=train --lr=0.0001 --grad_clip=1.0  --noise_type=gaussianBN --scheduler_gamma=sigmoid --scheduler_param=1000 --out_channel=6 --cov=pinkv2 --model=model_pinkv2
+python iadb_bn.py --dataset=cat_res64 --res=64 --batch_size=32 --epochs=20 --train_or_test=train --lr=0.0001 --grad_clip=1.0  --noise_type=gaussianBN --scheduler_gamma=sigmoid --scheduler_param=1000 --out_channel=6 --cov=violet --model=violet
+python iadb_bn.py --dataset=cat_res64 --res=64 --batch_size=32 --epochs=20 --train_or_test=train --lr=0.0001 --grad_clip=1.0  --noise_type=gaussianBN --scheduler_gamma=sigmoid --scheduler_param=1000 --out_channel=6 --cov=bluev8 --model=model_bluev8
+python iadb_bn.py --dataset=cat_res64 --res=64 --batch_size=32 --epochs=20 --train_or_test=train --lr=0.0001 --grad_clip=1.0  --noise_type=gaussianBN --scheduler_gamma=sigmoid --scheduler_param=1000 --out_channel=6 --cov=purplestrong --model=model_purplestrong
